@@ -1,0 +1,139 @@
+@import "../styles/tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  min-height: calc(100vh - var(--layout-header-height));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-border-strong) transparent;
+}
+
+/* ── Keyframe animations ── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-accent {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+/* ── Layout utilities ── */
+
+.page-shell {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: var(--layout-page-padding-y) var(--layout-page-padding-x);
+  animation: slideUp 0.25s ease both;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: var(--layout-gap-lg);
+  margin-bottom: var(--layout-gap-lg);
+}
+
+.page-header__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--brand-accent-strong) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+  margin: 8px 0 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ── Auth layout (legacy fallback) ── */
+
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--layout-page-padding-x);
+  background: var(--surface-base);
+}
+
+/* ── Accent gradient text helper ── */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--brand-accent-strong) 0%, var(--brand-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section card hover effect ── */
+
+.section-card {
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  border-left-color: var(--brand-accent);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Empty state ── */
+
+.empty-state {
+  animation: fadeIn 0.3s ease both;
+}
