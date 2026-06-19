@@ -143,15 +143,3 @@ supabase/
 
 - LinkedIn: [@shub1711](https://www.linkedin.com/in/shub1711/)
 - GitHub: [@shub1711](https://github.com/shub1711/)
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-## Show your support
-
-Give a star if this project helped you.
-
-## License
-
-Copyright © [Shubham Srivastav](https://github.com/shub1711).
