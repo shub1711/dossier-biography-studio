@@ -47,21 +47,11 @@
 - **Review & save** — Edit inline, sticky save bar, one profile per user
 - **Dark / light theme** — Persists across sessions
 
-## Screenshots
+## Video Shots
 
 > Add screenshots after your first deploy or local run. Drag images into a GitHub issue to get hosted URLs, then replace the placeholders below.
 
-### Login
 
-<!-- <img width="900" alt="Login screen" src="YOUR_IMAGE_URL" /> -->
-
-### Biography editor
-
-<!-- <img width="900" alt="Biography page" src="YOUR_IMAGE_URL" /> -->
-
-### Generate modal
-
-<!-- <img width="900" alt="Generate biography" src="YOUR_IMAGE_URL" /> -->
 
 ## Tech Stack
 
