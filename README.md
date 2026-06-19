@@ -79,7 +79,7 @@
 
 ### Prerequisites
 
-- Node.js 20+
+- React.js 19 and Next.js
 - Supabase project
 - OpenAI API key
 - Diffbot API key (for URL mode)
