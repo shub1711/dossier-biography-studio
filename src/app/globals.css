@@ -20,6 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  background-color: var(--surface-base);
+}
+
 main {
   min-height: calc(100vh - var(--layout-header-height));
 }

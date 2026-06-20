@@ -196,17 +196,17 @@ function GenerateBiographyModalComponent({
                 "--Tab-indicatorColor": "transparent",
               }}
             >
-              <Tab
-                startDecorator={<Link size={14} />}
-                disableIndicator
-              >
-                Profile URL
+              <Tab disableIndicator>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 0.75 }}>
+                  <Link size={14} />
+                  Profile URL
+                </Box>
               </Tab>
-              <Tab
-                startDecorator={<FileText size={14} />}
-                disableIndicator
-              >
-                Paste Text
+              <Tab disableIndicator>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 0.75 }}>
+                  <FileText size={14} />
+                  Paste Text
+                </Box>
               </Tab>
             </TabList>
 

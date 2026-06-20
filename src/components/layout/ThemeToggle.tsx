@@ -4,6 +4,8 @@ import { IconButton, Tooltip } from "@mui/joy";
 import { useColorScheme } from "@mui/joy/styles";
 import { Moon, Sun } from "@phosphor-icons/react";
 import { memo, useCallback, useEffect, useState } from "react";
+import { setThemeCookie } from "@/lib/theme";
+import type { ThemeMode } from "@/lib/theme";
 
 function ThemeToggleComponent() {
   const { mode, setMode } = useColorScheme();
@@ -14,7 +16,9 @@ function ThemeToggleComponent() {
   }, []);
 
   const toggle = useCallback(() => {
-    setMode(mode === "dark" ? "light" : "dark");
+    const next: ThemeMode = mode === "dark" ? "light" : "dark";
+    setThemeCookie(next);
+    setMode(next);
   }, [mode, setMode]);
 
   if (!mounted) {
