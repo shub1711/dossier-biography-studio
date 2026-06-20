@@ -31,6 +31,7 @@
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#demo-video">Demo Video</a> •
+  <a href="#screenshots">Screenshots</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#setup">Setup</a> •
   <a href="#author">Author</a>
@@ -75,37 +76,50 @@
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Authentication
 
 <p align="center">
-  <img src="<img width="1510" height="821" alt="Screenshot 2026-06-20 at 4 26 29 PM" src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c" />
-" alt="Login Screen" width="900" />
+  <img
+    src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c"
+    alt="Login screen"
+    width="900"
+  />
 </p>
 
 ### Biography Generation
 
 <p align="center">
-  <img src="<img width="735" height="523" alt="Screenshot 2026-06-20 at 4 26 13 PM" src="https://github.com/user-attachments/assets/362dbd15-611e-4afd-a38b-0b13afcfeeab" />
-" src="https://github.com/user-attachments/assets/0af7fed1-ebc7-474f-840c-6a47b39fd628" />
-" />
-" alt="Biography Generation Form" width="900" />
+  <img
+    src="https://github.com/user-attachments/assets/362dbd15-611e-4afd-a38b-0b13afcfeeab"
+    alt="Generate biography modal"
+    width="900"
+  />
 </p>
 
 ### Generated Dossier
 
 <p align="center">
-  <img src="![Uploading Screenshot 2026-06-20 at 4.25.37 PM.png…]()
-" alt="Generated Dossier" width="900" />
+  <img
+    src="https://github.com/user-attachments/assets/0af7fed1-ebc7-474f-840c-6a47b39fd628"
+    alt="Generated biography dossier with section cards"
+    width="900"
+  />
 </p>
 
-### AI Rewrite Feature
+### AI Rewrite
 
 <p align="center">
-  <img src="<img width="1047" height="379" alt="Screenshot 2026-06-20 at 4 30 50 PM" src="https://github.com/user-attachments/assets/46071a9a-4c43-4f73-a5c6-04226dcd5747" />
-" alt="AI Rewrite Feature" width="900" />
+  <img
+    src="https://github.com/user-attachments/assets/46071a9a-4c43-4f73-a5c6-04226dcd5747"
+    alt="AI rewrite section with voice input"
+    width="900"
+  />
 </p>
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
