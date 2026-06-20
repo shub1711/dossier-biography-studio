@@ -49,8 +49,7 @@
 
 ## Video Shots
 
-> Add screenshots after your first deploy or local run. Drag images into a GitHub issue to get hosted URLs, then replace the placeholders below.
-
+LOOM VIDEO PRODUCT OVERVIEW - https://www.loom.com/share/5196810926974b9084e1244ed623ba28
 
 
 ## Tech Stack
