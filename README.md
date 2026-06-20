@@ -64,9 +64,10 @@
     ▶ Product overview
   </a>
 </p>
+
 <p align="center">
-  <a href="[https://www.loom.com/share/5196810926974b9084e1244ed623ba28](https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b)" target="_blank" rel="noopener noreferrer">
-    ▶ Techinical overview 
+  <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
+    ▶ Technical overview 
   </a>
 </p>
 
@@ -74,6 +75,32 @@
 
 ---
 
+## 📸 Screenshots
+
+### Authentication
+
+<p align="center">
+  <img src="./screenshots/login.png" alt="Login Screen" width="900" />
+</p>
+
+### Biography Generation
+
+<p align="center">
+  <img src="<img width="1510" height="821" alt="Screenshot 2026-06-20 at 4 26 29 PM" src="https://github.com/user-attachments/assets/ee4b24d1-7215-4446-884d-a20524732d8c" />
+" alt="Biography Generation Form" width="900" />
+</p>
+
+### Generated Dossier
+
+<p align="center">
+  <img src="./screenshots/generated-dossier.png" alt="Generated Dossier" width="900" />
+</p>
+
+### AI Rewrite Feature
+
+<p align="center">
+  <img src="./screenshots/rewrite-feature.png" alt="AI Rewrite Feature" width="900" />
+</p>
 ## Tech Stack
 
 | Layer | Technology |
