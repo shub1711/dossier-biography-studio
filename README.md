@@ -48,31 +48,36 @@
 - **Review & save** — Edit inline, sticky save bar, one profile per user
 - **Dark / light theme** — Persists across sessions
 
-## Demo Video
+<h2 id="demo-video">Demo Video</h2>
 
-<p align="center">
-  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
-    <img
-      src="https://cdn.loom.com/sessions/thumbnails/5196810926974b9084e1244ed623ba28-with-play.gif"
-      alt="Dossier product demo — click to watch on Loom"
-      width="800"
-    />
-  </a>
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://cdn.loom.com/sessions/thumbnails/5196810926974b9084e1244ed623ba28-with-play.gif"
+          alt="Product overview — click to watch on Loom"
+          width="100%"
+        />
+      </a>
+      <br />
+      <sub><b>▶ Product overview</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://cdn.loom.com/sessions/thumbnails/7e5f31f1cba548b8abbe31323c97c70b-with-play.gif"
+          alt="Technical overview — click to watch on Loom"
+          width="100%"
+        />
+      </a>
+      <br />
+      <sub><b>▶ Technical overview</b></sub>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
-    ▶ Product overview
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
-    ▶ Technical overview
-  </a>
-</p>
-
-> GitHub README does not support embedded Loom players. The GIF above is a live preview — click it to open and play the full video on Loom.
+> GitHub README does not support embedded Loom players. Click either preview to watch the full video on Loom.
 
 ---
 
