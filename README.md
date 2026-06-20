@@ -48,7 +48,6 @@
 - **Review & save** — Edit inline, sticky save bar, one profile per user
 - **Dark / light theme** — Persists across sessions
 
-<h2 id="demo-video">Demo Video</h2>
 
 <h2 id="demo-video">🎥 Demo Videos</h2>
 
