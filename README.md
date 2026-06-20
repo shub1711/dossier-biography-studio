@@ -87,20 +87,24 @@
 ### Biography Generation
 
 <p align="center">
-  <img src="<img width="1510" height="821" alt="Screenshot 2026-06-20 at 4 26 29 PM" src="https://github.com/user-attachments/assets/ee4b24d1-7215-4446-884d-a20524732d8c" />
+  <img src="<img width="735" height="523" alt="Screenshot 2026-06-20 at 4 26 13 PM" src="https://github.com/user-attachments/assets/362dbd15-611e-4afd-a38b-0b13afcfeeab" />
+" src="https://github.com/user-attachments/assets/0af7fed1-ebc7-474f-840c-6a47b39fd628" />
+" />
 " alt="Biography Generation Form" width="900" />
 </p>
 
 ### Generated Dossier
 
 <p align="center">
-  <img src="./screenshots/generated-dossier.png" alt="Generated Dossier" width="900" />
+  <img src="![Uploading Screenshot 2026-06-20 at 4.25.37 PM.png…]()
+" alt="Generated Dossier" width="900" />
 </p>
 
 ### AI Rewrite Feature
 
 <p align="center">
-  <img src="./screenshots/rewrite-feature.png" alt="AI Rewrite Feature" width="900" />
+  <img src="<img width="1047" height="379" alt="Screenshot 2026-06-20 at 4 30 50 PM" src="https://github.com/user-attachments/assets/46071a9a-4c43-4f73-a5c6-04226dcd5747" />
+" alt="AI Rewrite Feature" width="900" />
 </p>
 ## Tech Stack
 
