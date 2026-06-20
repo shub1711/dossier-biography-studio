@@ -80,7 +80,8 @@
 ### Authentication
 
 <p align="center">
-  <img src="./screenshots/login.png" alt="Login Screen" width="900" />
+  <img src="<img width="1510" height="821" alt="Screenshot 2026-06-20 at 4 26 29 PM" src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c" />
+" alt="Login Screen" width="900" />
 </p>
 
 ### Biography Generation
