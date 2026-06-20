@@ -68,7 +68,7 @@
 
 <p align="center">
   <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
-    ▶ Technical overview 
+    ▶ Technical overview
   </a>
 </p>
 
@@ -80,13 +80,28 @@
 
 ### Authentication
 
-<p align="center">
-  <img
-    src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c"
-    alt="Login screen"
-    width="900"
-  />
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img
+        src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c"
+        alt="Login screen"
+        width="100%"
+      />
+      <br />
+      <sub><b>Login</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img
+        src="https://github.com/user-attachments/assets/24ae6112-e5fb-490f-89a3-0875b1b9011c"
+        alt="Sign up screen"
+        width="100%"
+      />
+      <br />
+      <sub><b>Sign up</b> (replace with signup screenshot)</sub>
+    </td>
+  </tr>
+</table>
 
 ### Biography Generation
 
@@ -120,28 +135,56 @@
 
 ---
 
-## Tech Stack
+<table>
+  <tr>
+    <td valign="top" width="50%">
+
+<h3 id="tech-stack">Tech Stack</h3>
 
 | Layer | Technology |
 |-------|------------|
 | Framework | Next.js 15 (App Router) |
 | UI | React 19, MUI Joy, Phosphor Icons |
 | Database & Auth | Supabase (PostgreSQL + RLS) |
-| AI | OpenAI via Vercel AI SDK |
+| AI | Gemini via Vercel AI SDK |
 | URL enrichment | Diffbot |
 | Forms | React Hook Form + Zod |
 | Data fetching | TanStack Query |
 
-## Setup
+    </td>
+    <td valign="top" width="50%">
 
-### Prerequisites
+<h3>Environment variables</h3>
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Yes | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Yes | Supabase anon key |
+| `SUPABASE_SERVICE_ROLE_KEY` | Yes | Service role (server-side jobs) |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | Yes | Gemini API key |
+| `DIFFBOT_API_KEY` | Yes (URL mode) | Diffbot Enhance API |
+| `NEXT_PUBLIC_USE_SUPABASE_FUNCTIONS` | No | `false` = local API routes (default) |
+
+See `.env.example` for the full list.
+
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td valign="top" width="33%">
+
+<h3 id="setup">Setup</h3>
+
+**Prerequisites**
 
 - React.js 19 and Next.js
 - Supabase project
-- OpenAI API key
+- Gemini API key
 - Diffbot API key (for URL mode)
 
-### Install & run
+**Install & run**
 
 ```bash
 git clone https://github.com/shub1711/dossier-biography-studio.git
@@ -158,20 +201,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) — sign up at `/signup`, then use `/biography`.
 
-### Environment variables
+    </td>
+    <td valign="top" width="33%">
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Yes | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Yes | Supabase anon key |
-| `SUPABASE_SERVICE_ROLE_KEY` | Yes | Service role (server-side jobs) |
-| `OPENAI_API_KEY` | Yes | OpenAI API key |
-| `DIFFBOT_API_KEY` | Yes (URL mode) | Diffbot Enhance API |
-| `NEXT_PUBLIC_USE_SUPABASE_FUNCTIONS` | No | `false` = local API routes (default) |
-
-See `.env.example` for the full list.
-
-### Scripts
+<h3>Scripts</h3>
 
 ```bash
 npm run dev      # Development server
@@ -180,7 +213,10 @@ npm run start    # Serve production build
 npm run lint     # ESLint
 ```
 
-## Project structure
+    </td>
+    <td valign="top" width="33%">
+
+<h3>Project structure</h3>
 
 ```
 src/
@@ -193,6 +229,12 @@ supabase/
 ├── migrations/       # Database schema + RLS
 └── functions/        # Edge function stubs
 ```
+
+    </td>
+  </tr>
+</table>
+
+---
 
 ## Author
 
