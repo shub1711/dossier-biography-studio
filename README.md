@@ -30,7 +30,7 @@
 
 <p align="center">
   <a href="#features">Features</a> •
-  <a href="#screenshots">Screenshots</a> •
+  <a href="#demo-video">Demo Video</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#setup">Setup</a> •
   <a href="#author">Author</a>
@@ -47,10 +47,27 @@
 - **Review & save** — Edit inline, sticky save bar, one profile per user
 - **Dark / light theme** — Persists across sessions
 
-## Video Shots
+## Demo Video
 
-LOOM VIDEO PRODUCT OVERVIEW - https://www.loom.com/share/5196810926974b9084e1244ed623ba28
+<p align="center">
+  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://cdn.loom.com/sessions/thumbnails/5196810926974b9084e1244ed623ba28-with-play.gif"
+      alt="Dossier product demo — click to watch on Loom"
+      width="800"
+    />
+  </a>
+</p>
 
+<p align="center">
+  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
+    ▶ Watch full demo on Loom
+  </a>
+</p>
+
+> GitHub README does not support embedded Loom players. The GIF above is a live preview — click it to open and play the full video on Loom.
+
+---
 
 ## Tech Stack
 
