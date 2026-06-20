@@ -51,37 +51,17 @@
 
 <h2 id="demo-video">🎥 Demo Videos</h2>
 
-<table>
-<tr>
-<td align="center" width="50%">
+<p align="center">
+  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
+    ▶ Product overview
+  </a>
+</p>
 
-<a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28">
-  <img
-    src="https://cdn.loom.com/sessions/thumbnails/5196810926974b9084e1244ed623ba28-with-play.gif"
-    alt="Product Overview"
-    width="100%"
-  />
-</a>
-
-<b>▶ Product Overview</b>
-
-</td>
-
-<td align="center" width="50%">
-
-<a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b">
-  <img
-    src="https://cdn.loom.com/sessions/thumbnails/7e5f31f1cba548b8abbe31323c97c70b-with-play.gif"
-    alt="Technical Overview"
-    width="100%"
-  />
-</a>
-
-<b>▶ Technical Overview</b>
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
+    ▶ Technical overview
+  </a>
+</p>
 
 > GitHub README does not support embedded Loom players. Click either preview to watch the full video on Loom.
 
