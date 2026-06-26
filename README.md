@@ -52,10 +52,17 @@
 <h2 id="demo-video">🎥 Demo Videos</h2>
 
 <p align="center">
-  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
-    ▶ Product overview
+  <a href="https://www.loom.com/share/89b1a9eced4f41d1a99acdaa5ef5a758" target="_blank" rel="noopener noreferrer">
+    ▶ Product overview (NEW)
   </a>
 </p>
+
+<p align="center">
+  <a href="https://www.loom.com/share/5196810926974b9084e1244ed623ba28" target="_blank" rel="noopener noreferrer">
+    ▶ Product overview (OLD)
+  </a>
+</p>
+
 
 <p align="center">
   <a href="https://www.loom.com/share/7e5f31f1cba548b8abbe31323c97c70b" target="_blank" rel="noopener noreferrer">
