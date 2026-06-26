@@ -21,32 +21,6 @@ export async function POST(request: Request) {
   const { email, password, full_name } = parsed.data;
   const admin = createAdminClient();
 
-  let customerId: string;
-  const { data: existingCustomer } = await admin
-    .from("customers")
-    .select("customer_id")
-    .order("created_at", { ascending: true })
-    .limit(1)
-    .maybeSingle();
-
-  if (existingCustomer?.customer_id) {
-    customerId = existingCustomer.customer_id;
-  } else {
-    const { data: newCustomer, error: customerError } = await admin
-      .from("customers")
-      .insert({ name: "Default Customer" })
-      .select("customer_id")
-      .single();
-
-    if (customerError || !newCustomer) {
-      return NextResponse.json(
-        { error: customerError?.message ?? "Failed to create customer" },
-        { status: 500 }
-      );
-    }
-    customerId = newCustomer.customer_id;
-  }
-
   const { data: authData, error: authError } = await admin.auth.admin.createUser({
     email,
     password,
@@ -61,6 +35,7 @@ export async function POST(request: Request) {
     );
   }
 
+
   const { data: existingUser } = await admin
     .from("users")
     .select("user_id")
@@ -68,8 +43,21 @@ export async function POST(request: Request) {
     .maybeSingle();
 
   if (!existingUser) {
+    const { data: customer, error: customerError } = await admin
+      .from("customers")
+      .insert({ name: full_name })
+      .select("customer_id")
+      .single();
+
+    if (customerError || !customer) {
+      return NextResponse.json(
+        { error: customerError?.message ?? "Failed to create customer" },
+        { status: 500 }
+      );
+    }
+
     const { error: userError } = await admin.from("users").insert({
-      customer_id: customerId,
+      customer_id: customer.customer_id,
       auth_user_id: authData.user.id,
       email,
       full_name,

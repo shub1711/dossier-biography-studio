@@ -1,18 +1,40 @@
 "use client";
 
-import { memo } from "react";
-import { Box, Button } from "@mui/joy";
-import { usePathname } from "next/navigation";
-import { SignOut } from "@phosphor-icons/react";
+import { memo, useEffect, useState } from "react";
+import {
+  Avatar,
+  Box,
+  Dropdown,
+  ListDivider,
+  Menu,
+  MenuButton,
+  MenuItem,
+  Typography,
+} from "@mui/joy";
+import { usePathname, useRouter } from "next/navigation";
+import { IdentificationCard, SignOut } from "@phosphor-icons/react";
 import { Logo } from "@/components/brand/Logo";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { useLogout } from "@/features/auth/hooks/useLogout";
+import { createClient } from "@/lib/supabase/client";
 
 function AppHeaderComponent() {
   const pathname = usePathname();
+  const router = useRouter();
   const handleSignOut = useLogout();
+  const [email, setEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth
+      .getUser()
+      .then(({ data }) => setEmail(data.user?.email ?? null))
+      .catch(() => setEmail(null));
+  }, []);
 
   if (pathname === "/login" || pathname === "/signup") return null;
+
+  const initial = email?.[0]?.toUpperCase() ?? "U";
 
   return (
     <Box
@@ -37,7 +59,8 @@ function AppHeaderComponent() {
           left: 0,
           right: 0,
           height: "1px",
-          background: "linear-gradient(90deg, transparent, var(--brand-accent-border), transparent)",
+          background:
+            "linear-gradient(90deg, transparent, var(--brand-accent-border), transparent)",
           opacity: 0.6,
         },
       }}
@@ -46,25 +69,76 @@ function AppHeaderComponent() {
 
       <Box sx={{ display: "flex", alignItems: "center", gap: 0.75 }}>
         <ThemeToggle />
-        <Button
-          variant="plain"
-          color="neutral"
-          size="sm"
-          onClick={handleSignOut}
-          startDecorator={<SignOut size={15} />}
-          sx={{
-            fontWeight: 500,
-            fontSize: "var(--font-size-sm)",
-            color: "var(--text-secondary)",
-            borderRadius: "var(--layout-radius-sm)",
-            "&:hover": {
-              bgcolor: "var(--brand-accent-muted)",
-              color: "var(--brand-accent)",
-            },
-          }}
-        >
-          Sign out
-        </Button>
+        <Dropdown>
+          <MenuButton
+            slots={{ root: Box }}
+            slotProps={{
+              root: {
+                "aria-label": "Open account menu",
+                role: "button",
+                tabIndex: 0,
+                sx: {
+                  cursor: "pointer",
+                  borderRadius: "50%",
+                  display: "flex",
+                  outline: "none",
+                  "&:focus-visible": {
+                    boxShadow: "0 0 0 2px var(--brand-accent)",
+                  },
+                },
+              },
+            }}
+          >
+            <Avatar
+              size="sm"
+              sx={{
+                bgcolor: "var(--brand-accent-muted)",
+                color: "var(--brand-accent)",
+                border: "1px solid var(--brand-accent-border)",
+                fontWeight: 600,
+                fontSize: "var(--font-size-sm)",
+              }}
+            >
+              {initial}
+            </Avatar>
+          </MenuButton>
+          <Menu
+            placement="bottom-end"
+            sx={{
+              minWidth: 200,
+              bgcolor: "var(--surface-overlay)",
+              border: "1px solid var(--surface-border)",
+              boxShadow: "var(--shadow-modal)",
+              "--ListItem-radius": "var(--layout-radius-sm)",
+            }}
+          >
+            {email ? (
+              <MenuItem disabled sx={{ opacity: 1 }}>
+                <Box sx={{ minWidth: 0 }}>
+                  <Typography level="body-xs" textColor="text.tertiary">
+                    Signed in as
+                  </Typography>
+                  <Typography
+                    level="body-sm"
+                    sx={{ fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis" }}
+                  >
+                    {email}
+                  </Typography>
+                </Box>
+              </MenuItem>
+            ) : null}
+            {email ? <ListDivider /> : null}
+            <MenuItem onClick={() => router.push("/biography")}>
+              <IdentificationCard size={16} weight="bold" />
+              Biography
+            </MenuItem>
+            <ListDivider />
+            <MenuItem color="danger" onClick={handleSignOut}>
+              <SignOut size={16} />
+              Sign out
+            </MenuItem>
+          </Menu>
+        </Dropdown>
       </Box>
     </Box>
   );

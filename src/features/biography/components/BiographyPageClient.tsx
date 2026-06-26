@@ -18,6 +18,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/core/Skeleton";
+import { PageBreadcrumbs } from "@/components/layout/PageBreadcrumbs";
 import { BIOGRAPHY_SECTION_FIELDS } from "@/lib/llm/schemas";
 import { biographyFormSchema, type BiographyFormValues } from "@/lib/validators";
 import { profileToFormValues } from "../api";
@@ -184,12 +185,14 @@ function BiographyPageClientComponent() {
     <Box className="page-shell">
       <Box className="page-header">
         <Box className="page-header__content">
+          <PageBreadcrumbs
+            items={[{ label: "Home", href: "/" }, { label: "Your Biography" }]}
+          />
           <Typography component="h1" className="page-title">
             Your Biography
           </Typography>
           <Typography component="p" className="page-subtitle">
-            Generate a structured dossier from a profile URL or pasted text, then review,
-            rewrite, and save.
+            Generate and maintain your biography.
           </Typography>
         </Box>
 
@@ -218,7 +221,7 @@ function BiographyPageClientComponent() {
             "&:active": { transform: "scale(0.98)" },
           }}
         >
-          {hasProfile ? "Regenerate" : "Generate"}
+          {hasProfile ? "Update" : "Generate"}
         </Button>
       </Box>
 
@@ -527,10 +530,11 @@ function BiographyPageClientComponent() {
             level="h4"
             sx={{ fontWeight: 700, letterSpacing: "-0.02em" }}
           >
-            Regenerate Biography?
+            Update Biography?
           </Typography>
           <Typography level="body-sm" textColor="text.secondary" sx={{ mt: 0.75 }}>
-            This will replace your current biography. Any unsaved edits will be lost.
+            This generates a new biography and replaces the current one. Your previous
+            version is saved to history, and any unsaved edits will be lost.
           </Typography>
           <Box sx={{ display: "flex", gap: 1.5, justifyContent: "flex-end", mt: 3 }}>
             <Button

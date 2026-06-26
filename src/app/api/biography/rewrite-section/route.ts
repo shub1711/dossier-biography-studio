@@ -2,6 +2,13 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { rewriteBiographySection } from "@/lib/llm/provider";
 import { requireAppUser } from "@/lib/auth/require-app-user";
+import {
+  createLlmJob,
+  markJobCompleted,
+  markJobFailed,
+  markJobRunning,
+} from "@/lib/biography/service";
+import { toErrorMessage } from "@/lib/error-message";
 
 const bodySchema = z.object({
   section_name: z.string().min(1),
@@ -23,17 +30,26 @@ export async function POST(request: Request) {
 
   const { section_name, current_text, user_instruction } = parsed.data;
 
+  const jobId = await createLlmJob({
+    customerId: auth.user.customer_id,
+    userId: auth.user.user_id,
+    jobType: "biography-rewrite-section",
+    inputRef: { section_name, instruction_length: user_instruction.length },
+  });
+
   try {
+    await markJobRunning(jobId);
     const new_text = await rewriteBiographySection(
       section_name,
       current_text,
       user_instruction
     );
+    await markJobCompleted(jobId, { section_name });
 
-    return NextResponse.json({ new_text });
+    return NextResponse.json({ new_text, job_id: jobId });
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Section rewrite failed";
-    return NextResponse.json({ error: message }, { status: 500 });
+    const message = toErrorMessage(error, "Section rewrite failed");
+    await markJobFailed(jobId, message);
+    return NextResponse.json({ error: message, job_id: jobId }, { status: 500 });
   }
 }

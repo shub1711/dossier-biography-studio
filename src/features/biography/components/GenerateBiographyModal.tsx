@@ -94,8 +94,8 @@ function GenerateBiographyModalComponent({
     <Modal open={open} onClose={onClose}>
       <ModalDialog
         sx={{
-          width: { xs: "95vw", sm: "560px" },
-          maxWidth: "560px",
+          width: { xs: "95vw", sm: "60vw" },
+          maxWidth: "60vw",
           maxHeight: "92vh",
           overflow: "hidden",
           display: "flex",
